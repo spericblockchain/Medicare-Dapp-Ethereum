@@ -1,28 +1,21 @@
-# AngualrSolidity
+DESCRIPTION ABOUT THE DApp:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.13.
+The MEDICARE Decentraised Application(DApp) manages the hospital, doctor and patient registrations, their ratings and the patient record managements correspondingly on Ethereum Blockchain platform. The patient registration is in such a way that the patient can create a record for him/herself and consult any doctor in any hospital so that each doctor consulting the particular patient can see his/her medical history record.
 
-## Development server
+In this DApp, the Government Organisation(HOII - Hospital Organisation in India) registers the hospitals with their corresponding public keys which give access for the hospitals to register their respective doctors and manage their hospital records. The Organisation client can add and delete the hospital details and likewise, the permissioned hospitals can add and delete the details of the doctors in their corresponding hospital. In both the cases, a record of rating track is kept for each hospital and each doctor.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The patient registration is done in such a way that the patient can create a record for him/herself and consult any doctor in any hospital so that each doctor consulting the particular patient can see his/her medical history record and the consulting doctor can add reports to the patient's record. The patient can finally do the rating for each consultation they have done.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+INSTRUCTIONS FOR SETTING-UP APPLICATION Requirements:
 
-## Build
+- [X] NodeJs 
+- [X] Truffle 
+- [X] Ganache GUI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+STEPS:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
+1. Run "npm install","truffle migrate --reset" and "ng serve"
+2. Open Browser & navigate LocalHost- http://localhost:4200 or Ip Address-http://127.0.0.1:4200
