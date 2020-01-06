@@ -1,0 +1,68 @@
+<div class="flex-container">
+  <div>
+<h3>Address Form</h3>
+</div>
+<div class="form_center">
+<form class="formwidth" (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+  <table class="fullwidth" cellspacing="10">
+    <tr>
+      <div>
+      <td>
+        <mat-form-field appearance="outline" class="fullwidth">
+          <mat-label>Prescription</mat-label>
+          <input
+            required
+            matInput
+            id="prescription"
+            ngModel
+            name="prescription"
+          />
+        </mat-form-field>
+      </td>
+    </div>
+    <div>
+      <td>
+        <mat-form-field appearance="outline" class="fullwidth">
+          <mat-label>Allowed Time</mat-label>
+          <input
+            required
+            matInput
+            type="number"
+            placeholder="Allowed Time"
+            id="allowedTime"
+            ngModel
+            name="allowedTime"
+          />
+        </mat-form-field>
+      </td>
+    </div>
+    </tr>
+  </table>
+
+  <table class="fullwidth" cellspacing="10">
+    <tr>
+      <td></td>
+      <td>
+        <p>
+          <button color="primary" mat-raised-button routerLink="/Doctor">
+            Back
+          </button>
+        </p>
+      </td>
+      <td>
+        <p>
+          <button
+            color="primary"
+            type="submit"
+            value="submit"
+            mat-raised-button
+          >
+            Submit
+          </button>
+        </p>
+      </td>
+    </tr>
+  </table>
+</form>
+</div>
+</div>

@@ -1,0 +1,111 @@
+<div class="flex-container">
+    <div>
+      <h3>Patient Register</h3>
+      <form class="formwidth" (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+        <table class="fullwidth" cellspacing="10">
+          <tr>
+            <td>
+              <mat-form-field appearance="outline" class="fullwidth">
+                <mat-label>Patient Name</mat-label>
+                <input
+                  required
+                  matInput
+                  id="patientName"
+                  ngModel
+                  name="patientName"
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline" class="fullwidth">
+                <mat-label>Patient Location</mat-label>
+                <input
+                  required
+                  matInput
+                  id="patientLocation"
+                  ngModel
+                  name="patientLocation"
+                />
+              </mat-form-field>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <mat-form-field appearance="outline" class="fullwidth">
+                <mat-label>Patient Contact</mat-label>
+                <input
+                  required
+                  matInput
+                  id="patientContact"
+                  ngModel
+                  name="patientContact"
+                />
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field appearance="outline" class="fullwidth">
+                <mat-label>Age</mat-label>
+                <input
+                  matInput
+                  required
+                  type="number"
+                  id="patientAge"
+                  ngModel
+                  name="patientAge"
+                />
+              </mat-form-field>
+            </td>
+          </tr>
+
+          <td>
+            <mat-form-field appearance="outline" class="fullwidth">
+              <mat-label>Gender</mat-label>
+              <mat-select [(value)]="gender">
+                <mat-option value="0">Male</mat-option>
+                <mat-option value="1">Female</mat-option>
+                <mat-option value="2">Other</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field appearance="outline" class="fullwidth">
+              <mat-label>Blood Group</mat-label>
+              <input
+                matInput
+                required
+                id="patientBloodGroup"
+                ngModel
+                name="patientBloodGroup"
+              />
+            </mat-form-field>
+          </td>
+
+          <tr>
+            <td></td>
+            <td>
+              <p>
+                <button
+                  color="primary"
+                  type="submit"
+                  value="submit"
+                  mat-raised-button
+                >
+                  Register
+                </button>
+            </p>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="loginP">
+      <mat-card>
+        <img src="assets/login.png">
+        <button mat-raised-button color="primary" (click)="login()">
+          Login
+        </button>
+    </mat-card>
+      
+    </div>
+  </div>

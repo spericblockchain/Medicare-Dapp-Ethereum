@@ -1,0 +1,68 @@
+<div class="flex-container">
+
+  <div class="view">
+    <h2>Patient Details</h2>
+    <div class="Rtable Rtable--4cols">
+
+      <div class="Rtable-cell">
+        <h3>Patient ID</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientId }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Name</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientName }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Location</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientLocation }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Contact</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientContact }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Age</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientAge }}</div>
+
+      <div class="Rtable-cell">
+        <h3>BloodGroup</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientBloodGroup }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Total Reports</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientReportList }}</div>
+
+      <div class="Rtable-cell">
+        <h3>pubKey</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.pubKey }}</div>
+
+    </div>
+  </div>
+  <!-- <p>Patient ID :{{ id }}</p>
+      <p>Name :{{ patient.patientName }}</p>
+      <p>Location :{{ patient.patientLocation }}</p>
+      <p>Contact :{{ patient.patientContact }}</p>
+      <p>Age :{{ patient.patientAge }}</p>
+      <p *ngIf="patient.patientSex == 0">Sex : Male</p>
+      <p *ngIf="patient.patientSex == 1">Sex : Female</p>
+      <p *ngIf="patient.patientSex == 2">Sex : Other</p>
+      <p>BloodGroup :{{ patient.patientBloodGroup }}</p>
+      <p>Total Reports :{{ patient.patientReportList }}</p>
+      <p>pubKey :{{ patient.pubKey }}</p> -->
+  <div class="viewReport">
+    <mat-card>
+      <button mat-raised-button color="primary" routerLink="/Patient/View-Reports">
+        View Reports
+      </button>
+    </mat-card>
+
+  </div>
+</div>

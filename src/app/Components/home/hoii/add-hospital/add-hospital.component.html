@@ -1,0 +1,84 @@
+<div class="flex-container">
+  <div>
+<h3>Address Form</h3>
+</div>
+<div class="form_center">
+<form class="formwidth" (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+  <table class="fullwidth" cellspacing="10">
+    <tr>
+      <td>
+        <mat-form-field appearance="outline" class="fullwidth">
+          <mat-label>Hospital Name</mat-label>
+          <input
+            required
+            matInput
+            id="hospitalName"
+            ngModel
+            name="hospitalName"
+          />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field appearance="outline" class="fullwidth">
+          <mat-label>Hospital Location</mat-label>
+          <input
+            required
+            matInput
+            id="hospitalLocation"
+            ngModel
+            name="hospitalLocation"
+          />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <table class="fullwidth" cellspacing="10">
+    <tr>
+      <td>
+        <mat-form-field appearance="outline" class="fullwidth">
+          <mat-label>Hospital Contact</mat-label>
+          <input
+            required
+            matInput
+            id="hospitalContact"
+            ngModel
+            name="hospitalContact"
+          />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field appearance="outline" class="fullwidth">
+          <mat-label>Public Address</mat-label>
+          <input
+            matInput
+            required
+            id="pubKey"
+            ngModel
+            name="pubKey"
+          />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <div class="subBtn">
+        <p>
+          <button color="primary" mat-raised-button routerLink="/HOII">
+            Back
+          </button>
+        </p>
+        <p>
+          <button
+            color="primary"
+            type="submit"
+            value="submit"
+            mat-raised-button
+          >
+            Submit
+          </button>
+        </p>
+        
+      </div>
+</form>
+</div>
+</div>

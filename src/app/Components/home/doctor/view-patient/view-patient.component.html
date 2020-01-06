@@ -1,0 +1,134 @@
+<div class="flex-container">
+  <h2>Patient Search</h2>
+  <div>
+    <button style="position: absolute;
+  right: 28px;
+  top: 80px;" color="primary" mat-raised-button routerLink="/Doctor">
+      Back
+    </button>
+  </div>
+  <div class="view">
+    <div class="Rtable Rtable--4cols">
+
+      <div class="Rtable-cell">
+        <h3>Patient ID</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientId }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Name</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientName }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Location</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientLocation }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Contact</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientContact }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Age</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientAge }}</div>
+
+      <div class="Rtable-cell">
+        <h3>BloodGroup</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientBloodGroup }}</div>
+
+      <div class="Rtable-cell">
+        <h3>Total Reports</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.patientReportList }}</div>
+
+      <div class="Rtable-cell">
+        <h3>pubKey</h3>
+      </div>
+      <div class="Rtable-cell">{{ patient.pubKey }}</div>
+
+    </div>
+  </div>
+  <!-- <div>
+
+    <p>Patient ID :{{ id }}</p>
+    <p>Name :{{ patient.patientName }}</p>
+    <p>Location :{{ patient.patientLocation }}</p>
+    <p>Contact :{{ patient.patientContact }}</p>
+    <p>Age :{{ patient.patientAge }}</p>
+    <p *ngIf="patient.patientSex == 0">Sex : Male</p>
+    <p *ngIf="patient.patientSex == 1">Sex : Female</p>
+    <p *ngIf="patient.patientSex == 2">Sex : Other</p>
+    <p>BloodGroup :{{ patient.patientBloodGroup }}</p>
+    <p>Total Reports :{{ patient.patientReportList }}</p>
+    <p>pubKey :{{ patient.pubKey }}</p>
+  </div> -->
+  <div>
+    <h1>Reports</h1>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="reportId">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.reportId}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="hospitalId">
+        <th mat-header-cell *matHeaderCellDef> Hospital Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.hospitalId}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="doctorId">
+        <th mat-header-cell *matHeaderCellDef> Doctor Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.doctorId}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="prescription">
+        <th mat-header-cell *matHeaderCellDef> Prescription </th>
+        <td mat-cell *matCellDef="let element"> {{element.prescription}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="reportedTime">
+        <th mat-header-cell *matHeaderCellDef> Reported Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.reportedTime}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="allowedTime">
+        <th mat-header-cell *matHeaderCellDef> Allowed Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.allowedTime}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        <!-- <td mat-cell *ngIf="!element.status" *matCellDef="let element"> Patient Verified </td> -->
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div>
+  </div>
+</div>
+
+
+<!-- <div *ngFor="let data of dataSource1" class="report">
+    <p>Id : {{ data.reportId }}</p>
+    <p>Hospital Id : {{ data.hospitalId }}</p>
+    <p>Doctor Id : {{ data.doctorId }}</p>
+    <p>Prescription : {{ data.prescription }}</p>
+    <p>ReportedTime : {{ data.reportedTime }}</p>
+    <p>AllowedTime : {{ data.allowedTime }}</p>
+    <p>Status : {{ data.status }}</p>
+  </div> -->

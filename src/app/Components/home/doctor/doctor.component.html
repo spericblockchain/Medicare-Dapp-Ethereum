@@ -1,0 +1,81 @@
+<div class="flex-container">
+  <div class="form_center">
+  <div>
+    <table class="fullwidth" cellspacing="10">
+      <tr>
+        <td>
+          <mat-form-field appearance="outline" class="fullwidth">
+            <mat-label>Patient ID</mat-label>
+            <input
+              matInput
+              type="number"
+              id="patientID"
+              [(ngModel)]="id"
+              name="patientID"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+      <div>
+          <p class="patientbtn">
+            <button
+              color="primary"
+              value="submit"
+              (click)="search()"
+              mat-raised-button
+            >
+              Patient Search
+            </button>
+          </p>
+        </div>
+    </table>
+</div>
+<div>
+    <table class="fullwidth" cellspacing="10">
+      <div>
+      <tr>
+        
+        <td>
+          <mat-form-field appearance="outline" class="fullwidth">
+            <mat-label>Patient ID</mat-label>
+            <input
+              matInput
+              type="number"
+              id="patientID"
+              [(ngModel)]="id"
+              name="patientID"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+        <tr>
+        <td>
+          <mat-form-field appearance="outline" class="fullwidth">
+            <mat-label>Patient PubKey</mat-label>
+            <input
+              matInput
+              id="patientkey"
+              [(ngModel)]="key"
+              name="patientkey"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+      </div>
+      
+      <div>
+          <p class="medicalbtn">
+            <button
+              color="primary"
+              value="submit"
+              (click)="gen()"
+              mat-raised-button
+            >
+              Generate Medical Report
+            </button>
+          </p>
+        </div>
+    </table>
+</div>
+</div>
+</div>

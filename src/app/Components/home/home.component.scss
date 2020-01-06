@@ -1,0 +1,15 @@
+/** @format */
+
+.home {
+  margin: 30px;
+}
+mat-card{
+  display: flex;
+    flex-direction: column;
+    padding: 35px;
+    height: 100px;
+    width: 80px;
+    img{
+      margin-bottom: 10px;
+    }
+}

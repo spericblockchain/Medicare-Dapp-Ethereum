@@ -1,0 +1,49 @@
+.flex-container{
+    display: flex;
+    padding: 0px 50px;
+  }
+  .view {
+    margin-left: 50px;
+    width: 950px;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+table {
+    width: 96%;
+  }
+  
+  .Rtable {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 3em 0;
+    padding: 0;
+  }
+  .Rtable-cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;  // Default to full width
+    padding: 8px 15px;
+    overflow: hidden; // Or flex might break
+    list-style: none;
+    border: solid 1px #ececec;
+    background: fade(slategrey,20%);
+    > h1, > h2, > h3, > h4, > h5, > h6 { margin: 0; }
+  }
+  
+  .Rtable--2cols > .Rtable-cell  { width: 50%; }
+  .Rtable--3cols > .Rtable-cell  { width: 33.33%; }
+  .Rtable--4cols > .Rtable-cell  { width: 50%; }
+  .Rtable--5cols > .Rtable-cell  { width: 20%; }
+  .Rtable--6cols > .Rtable-cell  { width: 16.6%; }
+  
+  mat-card{
+    display: flex;
+      padding: 50px;
+      height: 45px;
+      img{
+        margin-bottom: 10px;
+      }
+  }
+  .viewReport{
+      margin-top: 9em;  
+  }
